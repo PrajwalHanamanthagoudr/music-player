@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9nWZqVAZo8LuqEXX0qrh8e77feFAzA6E0UvStxdf24M7uHrd7bqj-XLdlu3FDKelqSzQ&usqp=CAU"
+    />
+    <title>Music-Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/004/266/051/small/h-music-logo-design-vector.jpg"
+          class="logo"
+        />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">specifications</a></li>
+          <li><a href="#">products</a></li>
+          <li><a href="#">connects</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="left-col">
+          <h1>
+            the <br />
+            real <br />
+            sound
+          </h1>
+        </div>
+        <div class="right-col">
+          <p>Click Here To Listen</p>
+          <img
+            src="
+            https://th.bing.com/th/id/OIP.DpkUD0--2xFkkUWZZ86rNAAAAA?pid=ImgDet&w=207&h=207&c=7"
+            id="icon"
+          />
+        </div>
+      </div>
+    </div>
+    <audio id="mySong">
+      <source
+        src="./Ed_Sheeran_&_Justin_Bieber_-_I_Don't_Care_[Official_Music_Video](128k) - Copy.mp3"
+        type="audio/mp3" aria-controls="Click"
+      />
+    </audio>
+    <script>
+      var mySong = document.getElementById("mySong");
+      var icon = document.getElementById("icon");
+      
+      icon.onclick=function()
+      {
+        if(mySong.play())
+        {
+          mySong.play();
+          icon.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9ZOvDpF5mP76QxbNs2EjeFt0kILUyHhlQ7sM7q-WtseI8LFznDrkR4Xanvl2BXzPaKSE&usqp=CAU";
+        }
+        else
+        {
+          mySong.paused();
+          icon.src="https://th.bing.com/th/id/OIP.DpkUD0--2xFkkUWZZ86rNAAAAA?pid=ImgDet&w=207&h=207&c=7";
+        }
+      }
+    </script>
+  </body>
+</html>
